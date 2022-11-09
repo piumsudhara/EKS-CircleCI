@@ -41,7 +41,7 @@ jobs:
           command: argocd app wait $APP_NAME
 
   argocd-configure:
-    executor: eks/default
+    executor: aws-eks/default
     parameters:
       cluster-name:
         description: |
