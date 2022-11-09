@@ -106,5 +106,6 @@ workflows:
             - docker/publish
       - argocd-configure:
           cluster-name: $CLUSTER_NAME
+          resource-group: $RESOURCE_GROUP
           requires:
             - bump-docker-tag-kustomize
