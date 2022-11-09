@@ -56,7 +56,7 @@ jobs:
       - run:
           name: Pull Updated code from repo
           command: git pull origin $CIRCLE_BRANCH
-      - eks/update-kubeconfig-with-credentials:
+      - aws-eks/update-kubeconfig-with-credentials:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
           perform-login: true
