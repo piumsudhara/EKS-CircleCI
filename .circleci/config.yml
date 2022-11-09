@@ -109,10 +109,3 @@ workflows:
           resource-group: $RESOURCE_GROUP
           requires:
             - bump-docker-tag-kustomize
-      # Paste the following only when you opt for the ArgoCD manual-sync-policy:
-      - argocd-manual-sync:
-          server: $ARGOCD_SERVER
-          username: $ARGOCD_USERNAME
-          password: $ARGOCD_PASSWORD
-          requires:
-            - argocd-configure
